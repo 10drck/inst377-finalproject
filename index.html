@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Finder</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/heatmap.js"></script>
+  <script src="https://code.highcharts.com/modules/tilemap.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header class="header">
+      <h1>University Domain Finder</h1>
+    </header>
+    <div class="container">
+      <div class="left_section box">
+        <h3>Form Inputs</h3>
+        <div class=" submit_form">
+          <form action="http://universities.hipolabs.com/search?country=United%20States" class=" box main_form">
+            <button type="button" id="data_load">Load University Data</button>
+            <div>
+              <label for="resto">University Names</label>
+              <input type="text" id="resto" name="resto" />
+            </div>
+            <div class="buttons">
+              <button type="button" class="filter_button">Filter Data with words</button>
+              <button type="button" class="generate">Generate Random List</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="right_section box">
+        <h3>University List:</h3>
+        <ol class="box" id="uni_list">
+        </ol>
+        <div class="lds-ellipsis" id="data_load_animation">
+        </div>
+      </div>
+    </div>
+    <figure class="highcharts-figure">
+      <div id="container"></div>
+      <p class="highcharts-description">
+        Hexagonal tilemap, sometimes referred to as a honeycomb or hexbin chart,
+        showing universities in the US. In this case the map is used to show
+        each US state with the same size - which removes some of the bias
+        associated with traditional maps, this is only for the time being until the later features are introduced.
+      </p>
+    </figure>
+
+  </div>
+  </div>
+  <footer class="footer">
+    Big thanks to <a href="https://github.com/Hipo">Hipo</a> for providing the <a href="https://github.com/Hipo/university-domains-list">API</a>, and <a href="https://www.highcharts.com/">HighChart</a> for providing the charting library, both free and open source!
+  </footer>
+  <script src="./script.js"></script>
+</body>
+
+</html>
